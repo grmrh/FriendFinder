@@ -1,0 +1,6 @@
+{! First, insert the base template as a partial !}
+{>"app/public/views/main.dust"/}
+{<bodyContent}
+<p>my body content </p>
+{/bodyContent}
+
