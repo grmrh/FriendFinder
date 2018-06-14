@@ -1,21 +1,15 @@
-const matchQuestions = [
-  "What motivates you to get out of bed in the morning?",
-  "Did you go to school? And if so, Where do you go to?", 
-  "What is your most bizarre talent or quirk?", 
-  "Who is your biggest role model apart from your family or relatives?",
-  "What is your favorite movie, book or TV show?",
-  "What is your typical Saturday night?", 
-  "What is a cause you are really passionate about?",
-  "What are some of your interests?", 
-  "Are you religious?", 
-  "What is your-go-to-drink on a night out?", 
-  "Why are you on here?", 
-  "What is your favorite kind of vacation?", 
-  "What is your favorite embarrasing story?", 
-  "What's an accomplishment you are most proud of?",
-  "Would you rather swim with sharks or go sky diving?"
-];
+const matchQuestions = {"Q": [
+  "Your mind is always buzzing with unexplored ideas and plans.",
+  "Generally speaking, you rely more on your experience than your imagination.", 
+  "You find it easy to stay relaxed and focused even when there is some pressure.", 
+  "You rarely do something just out of sheer curiosity.",
+  "People can rarely upset you.",
+  "It is often difficult for you to relate to other people’s feelings.", 
+  "In a discussion, truth should be more important than people’s sensitivities.",
+  "You rarely get carried away by fantasies and ideas.", 
+  "You think that everyone’s views should be respected regardless of whether they are supported by facts or not.", 
+  "You feel more energetic after spending time with a group of people."
+]};
 
-const answer = [
-  1, 2, 3, 4, 5
-];
+
+module.exports = matchQuestions;

@@ -2,7 +2,7 @@ var friends = [
   {
     "name": "Suki",
     "photo": "../assets/images/avataaars.png",
-    "scores":[
+    "score":[
       4,
       1,
       4,
@@ -18,7 +18,7 @@ var friends = [
   {
     "name": "Hittaci",
     "photo": "../assets/images/avataaars(1).png",
-    "scores":[
+    "score":[
       5,
       3,
       2,
@@ -34,7 +34,7 @@ var friends = [
   {
     "name": "Borneo",
     "photo": "../assets/images/avataaars(2).png",
-    "scores":[
+    "score":[
       1,
       2,
       2,
@@ -50,7 +50,7 @@ var friends = [
   {
     "name": "Hoomoon",
     "photo": "../assets/images/avataaars(3).png",
-    "scores":[
+    "score":[
       4,
       2,
       2,
@@ -66,7 +66,7 @@ var friends = [
   {
     "name": "Killian",
     "photo": "../assets/images/avataaars(4).png",
-    "scores":[
+    "score":[
       5,
       5,
       5,
@@ -82,7 +82,7 @@ var friends = [
   {
     "name": "Louigie",
     "photo": "../assets/images/avataaars(5).png",
-    "scores":[
+    "score":[
       4,
       5,
       1,
@@ -95,4 +95,7 @@ var friends = [
       1
     ]
   }
-]
+];
+
+module.exports = friends;
+

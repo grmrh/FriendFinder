@@ -1,6 +1,81 @@
-{! First, insert the base template as a partial !}
-{>"app/public/views/main.dust"/}
-{<bodyContent}
-<p>my body content </p>
-{/bodyContent}
+{! First, insert the base template as a partial !} 
+{>layout/} 
+{<bodyMain} <div class="container">
+  <div class="jumbotron">
+    <h1 class="text-center">
+      <span class="fa fa-fire"></span> Find Friends</h1>
+    <hr>
+    <h2 class="text-center">You can find (many) friends today!</h2>
+    <br>
+    <div class="text-center">
+      <a href="/">
+        <button class="btn btn-lg btn-primary">
+          <span class="fa fa-list-alt"></span> Home</button>
+      </a>
+    </div>
+  </div>
+{/bodyMain} 
+{<bestMatch}
+{/bestMatch}
+{<bodySurvey} 
+<form method='POST' action=''>
+  <fieldset>
+    <legend class="h2">Survey Questions</legend>
+    <div class="form-group">
+        <label class="col-form-label" for="flname">Name</label>
+        <input type="text" class="form-control" name='name' placeholder="Enter name" id="flname">
+    </div>
+    <div class="form-group">
+        <label for="photoImage">Upload photo</label>
+        <input type="file" class="form-control-file" id="photoImage" name='photo' aria-describedby="fileHelp">
+    </div>
+    {#Q}
+    <li class="list-unstyled">
+      <div class="card border-primary mb-3">
+        <div class="row">
+          <div class="col-md-9 form-group mb-0">
+            <div class="card-body h4">Q{$idx}. {.}</div>
+          </div>
+          <div class="col-md-3 form-group mt-3 mb-0">
+            <select class="form-control" id="score"+{$idx} name="score"+{$idx}>
+              <option value = '1'>1 (Strongly Disgree)</option>
+              <option value = '2'>2</option>
+              <option value = '3'>3</option>
+              <option value = '4'>4</option>
+              <option value = '5'>5 (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+  </li>{/Q}
+  <button type='submit' class='btn btn-lg btn-primary' data-toggle='modal' data-target='.match-found'>Submit</button>
+</fieldset>
+</form>
 
+
+<!-- modal for matched friend -->
+<div class="modal fade match-found" tabindex="-1" role="dialog" aria-labelledby="matchedNameModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Best Match</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <h6 id="username-search">Best Friend's name: </h6>
+            <h6 id="username-desc" style="color:black">{bestMatch}</h6>
+            
+        </div>
+        <div class="modal-body">
+          <h6 class="username-exists" style="color:black"></h6>
+        </div>
+        <div class="modal-footer ">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <!-- <button type="button " class="btn btn-primary ">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>  
+{/bodySurvey}

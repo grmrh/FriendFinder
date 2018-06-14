@@ -1,0 +1,28 @@
+{! First, insert the base template as a partial !} 
+{>layout/} 
+{<bodyMain} <div class="container">
+  <div class="jumbotron">
+    <h1 class="text-center">
+      <span class="fa fa-fire"></span> Find Friends</h1>
+    <hr>
+    <h2 class="text-center">You can find (many) friends today!</h2>
+    <br>
+    <div class="text-center">
+      <a href="/">
+        <button class="btn btn-lg btn-primary">
+          <span class="fa fa-list-alt"></span> Home</button>
+      </a>
+    </div>
+  </div>
+{/bodyMain} 
+{<bestMatch}
+<div class="card text-white bg-primary mb-3">
+    <div class="card-header">Best Match</div>
+    <div class="card-body">
+      <h4 class="card-title">{#bestMatch}{bestMatch}{/bestMatch}</h4>
+      <p class="card-text">You may want to find more friends. Try again!</p>
+    </div>
+  </div>
+{/bestMatch}
+{<bodySurvey}
+{/bodySurvey}
